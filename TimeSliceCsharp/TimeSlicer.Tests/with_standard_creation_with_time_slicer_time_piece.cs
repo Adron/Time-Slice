@@ -4,7 +4,7 @@ using Shouldly;
 namespace TimeSlicer.Tests
 {
     [TestFixture]
-    public class standard_creation_with_time_slicer_time_piece
+    public class with_standard_creation_with_time_slicer_time_piece
     {
         protected string sampleTimeOne = "10:12am";
         protected string sampleTimeTwo = "2:30pm";

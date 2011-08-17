@@ -55,7 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TimeSlicerTests.cs" />
+    <Compile Include="with_standard_creation_with_time_slicer_time_piece.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="with_static_parsing_of_time.cs" />
   </ItemGroup>
