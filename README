@@ -1,0 +1,1 @@
+This is a set of classes/functions that provide time parsing into actual usable numeric values. So far I've covered C#, and intend to include other languages such as Ruby and JavaScript.
