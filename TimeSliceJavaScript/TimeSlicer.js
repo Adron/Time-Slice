@@ -1,0 +1,5 @@
+
+
+function TimeSlicer(){
+    return "cheese";
+}
