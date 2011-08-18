@@ -1,5 +1,5 @@
+var TimeSlicer;
 
-
-function TimeSlicer(){
-    return "cheese";
-}
+TimeSlicer.Parse = function() {
+    return "stuff";
+};
