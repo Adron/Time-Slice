@@ -6,27 +6,73 @@
     <link rel="stylesheet" href="qunit/qunit.css" type="text/css" media="screen"/>
     <script type="text/javascript" src="jquery-1.6.2.js"></script>
     <script type="text/javascript" src="qunit/qunit.js"></script>
-    <script type="text/javascript" src="TimeSlicer.js"></script>
+    <script type="text/javascript" src="TimeSlicer/TimePiece.js"></script>
     <script type="text/javascript">
+
+    var timeValueOne = "1:30am";
+    var timeValueTwo = "8:15pm";
+
     $(document).ready(function() {
-        test("Calling something", function() {
-            equal(TimeSlicer.Parse(), "stuff", "stoff yeah!");
+
+        module("Parse hour from value.");
+
+        test("Should parse hour from value.", function() {
+            TimePiece(timeValueOne);
+            equal(TimePiece.Hour(), 1, "The appropriate hour value is returned for AM meridian value.");
+        });
+
+        test("Should parse hour from value.", function() {
+            TimePiece(timeValueTwo);
+            equal(TimePiece.Hour(), 8, "The appropriate hour value is returned for PM meridian value.");
+        });
+
+        module("Parse minute from value.");
+
+        test("Should parse minute from value.", function() {
+            var timePiece = TimePiece(timeValueOne);
+            equal(TimePiece.Minute(), 30, "The appropriate minute value is returned for AM meridian value.");
+        });
+
+        test("Should parse minute from value.", function() {
+            var timePiece = TimePiece(timeValueTwo);
+            equal(TimePiece.Minute(), 15, "The appropriate minute value is returned for PM meridian value.");
+        });
+
+        module("Parse military hour from value.");
+
+        test("Should parse military hour from value.", function(){
+            var timePiece = TimePiece(timeValueOne);
+            equal(TimePiece.MilitaryHour(), 1, "The appropriate military hour value is returned from the AM meridian value.");
+        });
+
+        test("Should parse military hour from value.", function(){
+            var timePiece = TimePiece(timeValueTwo);
+            equal(TimePiece.MilitaryHour(), 20, "The appropriate military hour value is returned from the PM meridian value.")
+        });
+
+        module("Parse meridian from value.");
+
+        test("Should parse meridian from value.", function(){
+            var timePiece = TimePiece(timeValueOne);
+            equal(TimePiece.Meridian(), "AM", "The appropriate meridian was returned from the value.");
+        });
+
+        test("Should parse meridian from value.", function(){
+            var timePiece = TimePiece(timeValueTwo);
+            equal(TimePiece.Meridian(), "PM", "The appropriate meridian was returned from the value.");
         });
     });
+
 </script>
 
 </head>
-<body>
 
 <body>
-<h1 id="qunit-header">QUnit example</h1>
-
+<h1 id="qunit-header">Time Parsing</h1>
 <h2 id="qunit-banner"></h2>
-
 <div id="qunit-testrunner-toolbar"></div>
 <h2 id="qunit-userAgent"></h2>
 <ol id="qunit-tests"></ol>
 <div id="qunit-fixture">hidden text</div>
-</body>
 </body>
 </html>
