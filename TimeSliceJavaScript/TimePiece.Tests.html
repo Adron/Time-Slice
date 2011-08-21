@@ -16,13 +16,6 @@
 
         module("Parse hour from value.");
 
-        // Next steps - figure out the creation of a "constructor" or something of that nature to remove the need to
-        // initiate the TimePiece object in every test.
-
-        // Next steps - find a library that creates better readability against the tests. More of a BDD style approach.
-
-        // Cleanup up the object initiation/creation/whatever it is JavaScript does??
-
         test("Should parse hour from value.", function() {
             TimePiece(timeValueOne);
             equal(TimePiece.Hour(), 1, "The appropriate hour value is returned for AM meridian value.");
@@ -31,14 +24,6 @@
         test("Should parse hour from value.", function() {
             TimePiece(timeValueTwo);
             equal(TimePiece.Hour(), 8, "The appropriate hour value is returned for PM meridian value.");
-        });
-
-        test("Should parse and return numeric value.", function(){
-            // Checking types - which one is actually returned? Preferably by default it would provide a number so as
-            // not to concatenate values or checks against the result but to numerically provide comparisons or such.
-             TimePiece(timeValueOne);
-             var result = TimePiece.Hour();
-             equal(typeof(result), typeof(Number), "The appropriate hour value is returned for PM meridian value.");
         });
 
         module("Parse minute from value.");
@@ -53,14 +38,6 @@
             equal(TimePiece.Minute(), 15, "The appropriate minute value is returned for PM meridian value.");
         });
 
-        test("Should parse and return numeric value.", function(){
-            // Checking types - which one is actually returned? Preferably by default it would provide a number so as
-            // not to concatenate values or checks against the result but to numerically provide comparisons or such.
-             TimePiece(timeValueOne);
-             var result = TimePiece.Minute();
-             equal(typeof(result), typeof(Number), "The appropriate hour value is returned for PM meridian value.");
-        });
-
         module("Parse military hour from value.");
 
         test("Should parse military hour from value.", function(){
@@ -71,14 +48,6 @@
         test("Should parse military hour from value.", function(){
             var timePiece = TimePiece(timeValueTwo);
             equal(TimePiece.MilitaryHour(), 20, "The appropriate military hour value is returned from the PM meridian value.")
-        });
-
-        test("Should parse and return numeric value.", function(){
-            // Checking types - which one is actually returned? Preferably by default it would provide a number so as
-            // not to concatenate values or checks against the result but to numerically provide comparisons or such.
-             TimePiece(timeValueOne);
-             var result = TimePiece.MilitaryHour();
-             equal(typeof(result), typeof(Number), "The appropriate hour value is returned for PM meridian value.");
         });
 
         module("Parse meridian from value.");
@@ -92,7 +61,6 @@
             var timePiece = TimePiece(timeValueTwo);
             equal(TimePiece.Meridian(), "PM", "The appropriate meridian was returned from the value.");
         });
-
     });
 
 </script>

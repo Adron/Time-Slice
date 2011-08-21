@@ -14,13 +14,15 @@ TimePiece = function(time) {
     TimePiece.Minute = function () {
         var timeString = time.toString();
         timeString = timeString.split(":")[1];
-        return timeString.substr(0, 2);
+        timeString = timeString.substr(0, 2);
+        return parseInt(timeString);
     }
 
     TimePiece.Meridian = function() {
         var timeString = time.toString();
         timeString = timeString.split(":")[1];
-        return timeString.substr(timeString.length - 2, 2).toUpperCase();
+        timeString = timeString.substr(timeString.length - 2, 2).toUpperCase();
+        return timeString;
     }
 
     TimePiece.MilitaryHour = function () {
