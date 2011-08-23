@@ -24,24 +24,10 @@ namespace TimeSlicer.Tests
         }
 
         [Test]
-        public void should_provide_the_hour_in_military_time_for_the_parsed_time()
-        {
-            var timePiece = new TimePiece(sampleTimeTwo);
-            timePiece.MilitaryHour.ShouldBe(14);
-        }
-
-        [Test]
         public void should_provide_the_minute()
         {
             var timePiece = new TimePiece(sampleTimeOne);
             timePiece.Minute.ShouldBe(12);
-        }
-
-        [Test]
-        public void should_provide_the_minute_for_military_parsing()
-        {
-            var timePiece = new TimePiece(sampleTimeTwo);
-            timePiece.Minute.ShouldBe(30);
         }
 
         [Test]
@@ -56,6 +42,41 @@ namespace TimeSlicer.Tests
         {
             var timePiece = new TimePiece(sampleTimeTwo);
             timePiece.Meridian.ShouldBe("PM");
+        }
+
+        [Test]
+        public void should_return_military_time_for_12_am()
+        {
+            var timePiece = new TimePiece("12:00am");
+            timePiece.Military.ShouldBe(0);
+        }
+
+        [Test]
+        public void should_return_military_time_for_12_am_plus_some()
+        {
+            var timePiece = new TimePiece("12:26am");
+            timePiece.Military.ShouldBe(26);
+        }
+
+        [Test]
+        public void should_return_military_time_for_12_pm()
+        {
+            var timePiece = new TimePiece("12:00pm");
+            timePiece.Military.ShouldBe(1200);
+        }
+
+        [Test]
+        public void should_return_military_time_for_pm_meridian_time()
+        {
+            var timePiece = new TimePiece("3:15pm");
+            timePiece.Military.ShouldBe(315);
+        }
+
+        [Test]
+        public void should_return_military_time_for_am_meridian_time()
+        {
+            var timePiece = new TimePiece("5:23am");
+            timePiece.Military.ShouldBe(1723);
         }
     }
 }

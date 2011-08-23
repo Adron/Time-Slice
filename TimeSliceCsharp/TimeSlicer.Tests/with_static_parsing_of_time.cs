@@ -26,29 +26,57 @@ namespace TimeSlicer.Tests
         [Test]
         public void should_return_a_time_piece_with_correct_minute()
         {
-            var timePiece = TimePiece.Parse(sampleTimeOne);
+            var timePiece= TimePiece.Parse(sampleTimeOne);
             timePiece.Minute.ShouldBe(12);
         }
 
         [Test]
         public void should_return_a_time_piece_with_correct_am_meridian()
         {
-            var timePiece = TimePiece.Parse(sampleTimeOne);
+            var timePiece= TimePiece.Parse(sampleTimeOne);
             timePiece.Meridian.ShouldBe("AM");
         }
 
         [Test]
         public void should_return_a_time_piece_with_correct_pm_meridian()
         {
-            var timePiece = TimePiece.Parse(sampleTimeTwo);
+            var timePiece= TimePiece.Parse(sampleTimeTwo);
             timePiece.Meridian.ShouldBe("PM");
         }
 
         [Test]
-        public void should_return_a_time_piece_with_correct_military_hour()
+        public void should_return_military_time_for_12_am()
         {
-            var timePiece = TimePiece.Parse(sampleTimeTwo);
-            timePiece.Minute.ShouldBe(30);
+            var timePiece = TimePiece.Parse("12:00am");
+            timePiece.Military.ShouldBe(0);
+        }
+
+        [Test]
+        public void should_return_military_time_for_12_am_plus_some()
+        {
+            var timePiece = TimePiece.Parse("12:26am");
+            timePiece.Military.ShouldBe(26);
+        }
+
+        [Test]
+        public void should_return_military_time_for_12_pm()
+        {
+            var timePiece = TimePiece.Parse("12:00pm");
+            timePiece.Military.ShouldBe(1200);
+        }
+
+        [Test]
+        public void should_return_military_time_for_pm_meridian_time()
+        {
+            var timePiece = TimePiece.Parse("3:15pm");
+            timePiece.Military.ShouldBe(315);
+        }
+
+        [Test]
+        public void should_return_military_time_for_am_meridian_time()
+        {
+            var timePiece = TimePiece.Parse("5:23am");
+            timePiece.Military.ShouldBe(1723);
         }
     }
 }

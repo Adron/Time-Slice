@@ -12,9 +12,9 @@ namespace TimeSlicer
         private void ParseTime(string time)
         {
             SetHour(time);
-            SetMilitaryHour(time);
             SetMinute(time);
             SetMeridian(time);
+            SetMilitary(time);
         }
 
         private void SetMeridian(string time)
@@ -28,9 +28,16 @@ namespace TimeSlicer
             Minute = Convert.ToInt32(parsed.Remove(parsed.Length - 2, 2));
         }
 
-        private void SetMilitaryHour(string time)
+        private void SetMilitary(string time)
         {
-            MilitaryHour = Convert.ToInt32(time.Split(Convert.ToChar(":"))[0]) + 12;
+            var hourValue = Convert.ToInt32(time.Split(Convert.ToChar(":"))[0]);
+
+            if (Meridian == "AM" && hourValue == 12)
+                Military = Minute;
+            else if (Meridian == "AM" && hourValue != 12)
+                Military = Minute + ((Hour + 12) * 100);
+            else
+                Military = Minute + (Hour * 100);
         }
 
         private void SetHour(string time)
@@ -40,7 +47,7 @@ namespace TimeSlicer
 
         public string Error { get; set; }
         public int Hour { get; set; }
-        public int MilitaryHour { get; set; }
+        public int Military { get; set; }
         public int Minute { get; set; }
         public string Meridian { get; set; }
 
