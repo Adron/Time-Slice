@@ -1,4 +1,3 @@
-
 TIME SLICER
 =================
 
@@ -41,7 +40,11 @@ Once you've cloned the project explore the TimeSliceJavaScript directory. There 
     var theMinute = TimePiece.Minute();
     var theMilitaryHour = TimePiece.MilitaryHour();
 
-AUTHOR
+ORGANIZATION
+
+Three Step Solutions
+
+AUTHORS
 ------
 
 Adron B. Hall
