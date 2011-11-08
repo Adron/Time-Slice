@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{3D382070-F53A-4289-B66F-CB9BE1883552}</ProjectGuid>
+    <ProjectGuid>{8931800A-5280-409B-9559-F65BC0C1DF10}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TimeSlicer.Tests</RootNamespace>
-    <AssemblyName>TimeSlicer.Tests</AssemblyName>
+    <RootNamespace>DateSlicer.Tests</RootNamespace>
+    <AssemblyName>DateSlicer.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,7 +41,7 @@
       <HintPath>..\packages\NUnit.2.5.10.11092\lib\pnunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="Shouldly">
-      <HintPath>..\packages\Shouldly.1.0.1.73\lib\35\Shouldly.dll</HintPath>
+      <HintPath>..\packages\Shouldly.1.1.0.1\lib\35\Shouldly.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -52,17 +52,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="with_standard_creation_with_time_slicer_time_piece.cs" />
+    <Compile Include="with_a_month.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="with_static_parsing_of_time.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TimeSlicer\TimeSlicer.csproj">
-      <Project>{4076F030-C5EF-4449-9CB4-155DD22FDB67}</Project>
-      <Name>TimeSlicer</Name>
+    <ProjectReference Include="..\DateSlicer\DateSlicer.csproj">
+      <Project>{1ACEC72B-F5D0-4E0E-99A0-BDD63757FB74}</Project>
+      <Name>DateSlicer</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

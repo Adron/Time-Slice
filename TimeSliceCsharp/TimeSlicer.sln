@@ -5,6 +5,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeSlicer", "TimeSlicer\Ti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeSlicer.Tests", "TimeSlicer.Tests\TimeSlicer.Tests.csproj", "{3D382070-F53A-4289-B66F-CB9BE1883552}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateSlicer", "DateSlicer\DateSlicer.csproj", "{1ACEC72B-F5D0-4E0E-99A0-BDD63757FB74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateSlicer.Tests", "DateSlicer.Tests\DateSlicer.Tests.csproj", "{8931800A-5280-409B-9559-F65BC0C1DF10}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +23,14 @@ Global
 		{3D382070-F53A-4289-B66F-CB9BE1883552}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D382070-F53A-4289-B66F-CB9BE1883552}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D382070-F53A-4289-B66F-CB9BE1883552}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ACEC72B-F5D0-4E0E-99A0-BDD63757FB74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ACEC72B-F5D0-4E0E-99A0-BDD63757FB74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ACEC72B-F5D0-4E0E-99A0-BDD63757FB74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ACEC72B-F5D0-4E0E-99A0-BDD63757FB74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8931800A-5280-409B-9559-F65BC0C1DF10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8931800A-5280-409B-9559-F65BC0C1DF10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8931800A-5280-409B-9559-F65BC0C1DF10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8931800A-5280-409B-9559-F65BC0C1DF10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
