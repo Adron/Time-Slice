@@ -48,5 +48,7 @@ AUTHORS
 ------
 
 Adron B. Hall
-http://compositecode.com
+
+http://compositecode.
+
 http://www.adronbhall.com
