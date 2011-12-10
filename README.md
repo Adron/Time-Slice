@@ -49,6 +49,6 @@ AUTHORS
 
 Adron B. Hall
 
-http://compositecode.
+http://compositecode.com
 
 http://www.adronbhall.com
