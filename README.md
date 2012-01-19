@@ -1,4 +1,4 @@
-"!http://api.coderwall.com/adron/endorsecount.png!":http://coderwall/adron
+[![endorse](http://api.coderwall.com/adron/endorsecount.png)](http://coderwall.com/adron)
 
 TIME SLICER
 =================
