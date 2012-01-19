@@ -1,3 +1,5 @@
+"!http://api.coderwall.com/adron/endorsecount.png!":http://coderwall/adron
+
 TIME SLICER
 =================
 
